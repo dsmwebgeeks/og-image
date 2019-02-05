@@ -60,8 +60,9 @@ function getCss(theme: string, fontSize: string) {
     }
 
     .logo {
-        width: 225px;
-        height: 225px;
+        width: 425px;
+        height: 425px;
+        padding: 0 150px;
     }
 
     .plus {
@@ -73,7 +74,7 @@ function getCss(theme: string, fontSize: string) {
     .spacer {
         margin: 150px;
     }
-    
+
     .heading {
         font-family: 'Inter UI', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};

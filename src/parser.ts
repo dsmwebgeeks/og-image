@@ -12,7 +12,6 @@ export function parseRequest(req: IncomingMessage) {
         throw new Error('Expected a single theme');
     }
 
-    
     const arr = pathname.slice(1).split('.');
     let extension = '';
     let text = '';
@@ -38,10 +37,10 @@ export function parseRequest(req: IncomingMessage) {
 }
 
 function getDefaultImages(images: string[], theme: Theme) {
-    if (images.length > 0 && images[0] && images[0].startsWith('https://assets.zeit.co/image/upload/front/assets/design/')) {
+    if (images.length > 0 && images[0] && images[0].includes('wg-logo.svg')) {
         return images;
     }
     return theme === 'light'
-    ? ['https://assets.zeit.co/image/upload/front/assets/design/now-black.svg']
-    : ['https://assets.zeit.co/image/upload/front/assets/design/now-white.svg'];
+    ? ['https://files-1w5r2ne8r.now.sh/wg-logo.svg']
+    : ['https://files-1w5r2ne8r.now.sh/wg-logo.svg'];
 }
