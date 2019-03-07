@@ -15,6 +15,12 @@ function getCss(theme: string, fontSize: string) {
         foreground = 'white';
         radial = 'dimgray';
     }
+
+    if (theme === 'blue') {
+        background = '#102ebd';
+        foreground = 'white';
+        radial = 'dimgray';
+    }
     return `
     @font-face {
         font-family: 'Inter UI';
